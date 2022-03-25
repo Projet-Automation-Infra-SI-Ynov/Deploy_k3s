@@ -8,4 +8,4 @@
 
 - name: Get Master Token 
   shell: cat /var/lib/rancher/k3s/server/node-token
-  register: TOKEN_env
+  register: Token
