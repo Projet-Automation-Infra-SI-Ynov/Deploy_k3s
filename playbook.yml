@@ -4,7 +4,7 @@
 - hosts: Master
   become: yes
   roles:
-    - role: Docker
-    - role: Git
+    - role: docker
+    - role: git
     - role: k3s-master
     - role: k3s-worker
