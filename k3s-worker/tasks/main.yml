@@ -1,0 +1,8 @@
+---
+- name: Set a hostname
+  ansible.builtin.hostname:
+    name: k3s-worker-01
+
+# tasks file for k3s-worker
+- name: Install k3s Worker Node
+  shell: curl -sfL https://get.k3s.io | K3S_URL=https://###IP_K3S_MASTER###:6443 K3S_TOKEN={{ TOKEN_env }} sh -

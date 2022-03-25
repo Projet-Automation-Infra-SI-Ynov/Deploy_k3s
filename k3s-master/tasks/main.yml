@@ -1,0 +1,11 @@
+---
+- name: Set a hostname
+  ansible.builtin.hostname:
+    name: k3s-master-01
+
+- name: Install k3s Master Node
+  shell: curl -sfL https://get.k3s.io/ | sh -s - --docker
+
+- name: Get Master Token 
+  shell: cat /var/lib/rancher/k3s/server/node-token
+  register: TOKEN_env

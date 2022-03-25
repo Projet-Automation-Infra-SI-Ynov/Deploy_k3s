@@ -1,0 +1,10 @@
+# ansible-playbook -i inventory.ini playbook.yml --limit grafana
+# https://docs.ansible.com/ansible/latest/user_guide/playbooks_environment.html
+
+- hosts: Master
+  become: yes
+  roles:
+    - role: Docker
+    - role: Git
+    - role: k3s-master
+    - role: k3s-worker
