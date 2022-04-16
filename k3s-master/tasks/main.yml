@@ -4,7 +4,7 @@
     name: k3s-master-01
 
 - name: Install k3s Master Node
-  shell: curl -sfL https://get.k3s.io/ | sh -s - --docker
+  shell: curl -sfL https://get.k3s.io/ | sh -s - --docker --basic-auth-file
 
 - name: Get Master Token 
   shell: cat /var/lib/rancher/k3s/server/node-token

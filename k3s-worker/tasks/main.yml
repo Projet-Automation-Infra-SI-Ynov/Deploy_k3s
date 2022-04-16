@@ -5,4 +5,4 @@
 
 # tasks file for k3s-worker
 - name: Install k3s Worker Node
-  shell: curl -sfL https://get.k3s.io | K3S_URL=https://{{ IP_MASTER }}:6443 K3S_TOKEN={{ Token }} sh -
+  shell: curl -sfL https://get.k3s.io | K3S_URL=https://{{ IP_MASTER }}:6443 K3S_TOKEN={{ Token }} sh - --basic-auth-file
