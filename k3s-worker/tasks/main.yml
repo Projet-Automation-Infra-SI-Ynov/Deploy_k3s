@@ -3,7 +3,7 @@
   ansible.builtin.hostname:
     name: k3s-worker-01
 
-- name: Download Grafana repository
+- name: Download k3s repository
   git:
     repo: https://github.com/Projet-Automation-Infra-SI-Ynov/Deploy_k3s.git
     dest: /home/administrateur/k3s
